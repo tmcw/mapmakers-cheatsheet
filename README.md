@@ -30,9 +30,12 @@
   - Raster
     - Render a map with [TileMill](https://www.mapbox.com/tilemill/) and use the tiles in Leaflet
   - Names of places, like countries
-    - With IDs, like ISO3 codes
-      - Download [Natural Earth](http://www.naturalearthdata.com/) data at the right level, join with QGIS,
-        and start again at Polygons
+    - With IDs:
+      - ISO2 or ISO3 codes
+        - Download [Natural Earth](http://www.naturalearthdata.com/) data at the right level, join with QGIS,
+          and start again at Polygons
+      - ZIP codes
+        - Download [ZCTAs](https://www.census.gov/geo/reference/zctas.html) and join
     - Without IDs
       - Find data with IDs, or manually join with polygons
   - Addresses
