@@ -27,6 +27,10 @@
       - Rates or Categories
         - Make a choropleth map with Leaflet for small data, [TileMill](https://www.mapbox.com/tilemill/)
           for big data
+      - Temporal data - values over time
+        - If there are fewer than 100 samples - like 50 years of data grouped by year, make [small multiples](http://www.nytimes.com/interactive/2012/07/20/us/drought-footprint.html): a map per sample.
+        - If you can code, make an animation with Leaflet or d3
+        - If it's tons of data, use [CartoDB and torque](http://blog.cartodb.com/post/66687861735/torque-is-live-try-it-on-your-cartodb-maps-today)
   - Raster
     - Render a map with [TileMill](https://www.mapbox.com/tilemill/) and use the tiles in Leaflet
   - Names of places, like countries
