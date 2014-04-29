@@ -11,6 +11,7 @@
       - Too much and the points just represent presence - like tweets
         - Create a heatmap with [Leaflet.heat](https://github.com/Leaflet/Leaflet.heat) or QGIS heatmap plugin. If you
           use QGIS heatmap, start again at Raster.
+      - Tons of data, and you don't need labels? Use [datamaps](https://github.com/ericfischer/datamaps).
   - Polygons
     - How much data?
       - Just enough
@@ -33,6 +34,10 @@
         - If it's tons of data, use [CartoDB and torque](http://blog.cartodb.com/post/66687861735/torque-is-live-try-it-on-your-cartodb-maps-today)
       - Multivariate data: like counts of different species or ethnicities
         - Make a [dot density map](http://demographics.coopercenter.org/DotMap/index.html) with [englewood](https://github.com/newsapps/englewood)
+  - Lines
+    - Small amounts of data: use [Leaflet](http://leafletjs.com/)
+    - Lots of data, or need line labels (are they streets?)? Use [TileMill](https://www.mapbox.com/tilemill/)
+    - Tons of data, and you don't need line labels? Use [datamaps](https://github.com/ericfischer/datamaps).
   - Raster
     - Render a map with [TileMill](https://www.mapbox.com/tilemill/) and use the tiles in Leaflet
   - Names of places, like countries
@@ -57,15 +62,17 @@
 
 - Visualization defaults
   - Projection:
-    - If it's a web map with tiles, use Mercator
-    - If using [d3](http://d3js.org/) and not using tiles anywhere, use whatever fits best
+    - If it's a web map with tiles, use [Spherical Mercator](http://epsg.io/3857)
+    - If using [d3](http://d3js.org/) and not using tiles anywhere, use whatever fits best. Bonus projections are in [d3-geo-projection](https://github.com/d3/d3-geo-projection).
+    - Have a project and not sure what it is? Use [epsg.io](http://epsg.io/3857).
   - Colors:
     - When in doubt, use [ColorBrewer](http://colorbrewer2.org/)
+    - Want to know more? Read [Subtleties of Color](http://earthobservatory.nasa.gov/blogs/elegantfigures/2013/08/05/subtleties-of-color-part-1-of-6/)
   - Scales:
     - For any data
       - Try linear first
       - Then quantile
-    - For data of rates or compounding
+    - For data of rates or compounding values
       - Try log and power scales
   - Points:
     - Start with normal circles with no strokes
