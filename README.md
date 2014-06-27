@@ -40,6 +40,7 @@
     - Tons of data, and you don't need line labels? Use [datamaps](https://github.com/ericfischer/datamaps).
   - Raster
     - Render a map with [TileMill](https://www.mapbox.com/tilemill/) and use the tiles in Leaflet
+    - Read [processing satellite imagery](https://www.mapbox.com/foundations/processing-satellite-imagery/) to understand GDAL/ImageMagick workflow.
   - Names of places, like countries
     - With IDs:
       - ISO2 or ISO3 codes
@@ -52,6 +53,10 @@
   - Addresses
     - You can't map addresses directly. Geocode them with [OpenRefine](http://openrefine.org/) or
       [Geo for Google Docs](https://www.mapbox.com/geo-for-google-docs/), and then start at Points
+    - Other Geocoding options:
+      - [forrest](http://tristen.ca/forrest/) (Mapbox)
+      - [geocod.io](http://geocod.io/)
+      - [nominatim](http://nominatim.openstreetmap.org/)
   - A format that I can't read
     - Install [GDAL](http://www.gdal.org/) and use ogr2ogr to convert the file
     - Ask your source for a better file format
