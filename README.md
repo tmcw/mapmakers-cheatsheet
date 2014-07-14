@@ -3,7 +3,7 @@
     - How much data?
       - Just enough
         - Convert the data to GeoJSON & make a simple Leaflet map
-      - Too much in a confusing way, but each point's data is important?
+      - Too much in a confusing way, but each points data is important?
         - Cluster your points with [Leaflet.markercluster](https://github.com/Leaflet/Leaflet.markercluster)
       - Too much and the points have some value that can be aggregated
         - Create hexbins of your points with the [QGIS hexbin](https://www.mapbox.com/blog/binning-alternative-point-maps/) plugin, to make
