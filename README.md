@@ -2,14 +2,14 @@
   - Points
     - How much data?
       - Just enough
-        - Convert the data to GeoJSON & make a simple Leaflet map
+        - Convert the data to [GeoJSON](http://geojson.org/) & make a simple [Leaflet](http://leafletjs.com/) map
       - Too much in a confusing way, but each points data is important?
         - Cluster your points with [Leaflet.markercluster](https://github.com/Leaflet/Leaflet.markercluster)
       - Too much and the points have some value that can be aggregated
         - Create hexbins of your points with the [QGIS hexbin](https://www.mapbox.com/blog/binning-alternative-point-maps/) plugin, to make
           polygons. Start again at Polygons
       - Too much and the points just represent presence - like tweets
-        - Create a heatmap with [Leaflet.heat](https://github.com/Leaflet/Leaflet.heat) or QGIS heatmap plugin. If you
+        - Create a heatmap with [Leaflet.heat](https://github.com/Leaflet/Leaflet.heat) or [QGIS heatmap](http://qgis.spatialthoughts.com/2012/07/tutorial-making-heatmaps-using-qgis-and.html) plugin. If you
           use QGIS heatmap, start again at Raster.
       - Tons of data, and you don't need labels? Use [datamaps](https://github.com/ericfischer/datamaps).
   - Polygons
@@ -26,11 +26,11 @@
         - Normalize absolutes to rates by dividing over polygon area,
           and start from Rates
       - Rates or Categories
-        - Make a choropleth map with Leaflet for small data, [TileMill](https://www.mapbox.com/tilemill/)
+        - Make a choropleth map with [Leaflet](http://leafletjs.com/) for small data, [TileMill](https://www.mapbox.com/tilemill/)
           for big data
       - Temporal data - values over time
         - If there are fewer than 100 samples - like 50 years of data grouped by year, make [small multiples](http://www.nytimes.com/interactive/2012/07/20/us/drought-footprint.html): a map per sample.
-        - If you can code, make an animation with Leaflet or d3
+        - If you can code, make an animation with [Leaflet](http://leafletjs.com/) or [d3.js](http://d3js.org/)
         - If it's tons of data, use [CartoDB and torque](http://blog.cartodb.com/post/66687861735/torque-is-live-try-it-on-your-cartodb-maps-today)
       - Multivariate data: like counts of different species or ethnicities
         - Make a [dot density map](http://demographics.coopercenter.org/DotMap/index.html) with [englewood](https://github.com/newsapps/englewood)
@@ -40,7 +40,7 @@
     - Tons of data, and you don't need line labels? Use [datamaps](https://github.com/ericfischer/datamaps).
   - Raster
     - Render a map with [TileMill](https://www.mapbox.com/tilemill/) and use the tiles in Leaflet
-    - Read [processing satellite imagery](https://www.mapbox.com/foundations/processing-satellite-imagery/) to understand GDAL/ImageMagick workflow.
+    - Read [processing satellite imagery](https://www.mapbox.com/foundations/processing-satellite-imagery/) to understand [GDAL](http://www.gdal.org/)/[ImageMagick](http://www.imagemagick.org/) workflow.
   - Names of places, like countries
     - With IDs:
       - ISO2 or ISO3 codes
@@ -86,3 +86,4 @@
     - Only add a north arrow if north isn't up
     - Always attribute your data, especially [OpenStreetMap](http://www.openstreetmap.org/), to avoid the nerd wrath
     - If it zooms, add visible zoom controls. Pan isn't necessary, but not everyone has a scroll wheel / multitouch
+
