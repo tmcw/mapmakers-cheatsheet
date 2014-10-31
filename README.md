@@ -64,6 +64,8 @@
     - Contact the town or federal GIS dept you need
     - Use [FOIAMachine.org](https://www.foiamachine.org/) to request data via FOIA
     - If you want to create data, use [geojson.io](http://geojson.io/) and draw it.
+    - For basic data like countries, cities, use [naturalearthdata.com](http://www.naturalearthdata.com/)
+    - Use [OpenStreetMap extracts](https://mapzen.com/metro-extracts/) for higher-detail local data
 
 - Visualization defaults
   - Projection:
