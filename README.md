@@ -21,9 +21,10 @@
   - Just enough
     - Convert the data to [GeoJSON](http://geojson.org/) & make a simple Leaflet map
   - Too much, the polygons have necessary detail
-    - Use TileMill to render an interactive map with [UTFGrid](https://www.mapbox.com/developers/utfgrid/)
+    - Use [TileMill](https://www.mapbox.com/tilemill/) to render an interactive map with [UTFGrid](https://www.mapbox.com/developers/utfgrid/)
+    - Use [GeoServer](http://geoserver.org/) with WMS layers and GetFeatureInfo
   - Too much, the polygons have unnecessary details
-    - Simplify them with [TopoJSON](https://github.com/mbostock/topojson) or QGIS
+    - Simplify them with [TopoJSON](https://github.com/mbostock/topojson) or [QGIS](http://www.qgis.org/)
 
 ## Attributes
 
@@ -57,8 +58,10 @@
       - US: [US Census](http://geocoding.geo.census.gov/geocoder/Geocoding_Services_API.pdf)
       - Canada: [Geogratis](http://geogratis.gc.ca/site/eng/geoloc)
       - OpenStreetMap: [Nominatim](http://nominatim.openstreetmap.org/)
+      - [Data Science Toolkit](https://github.com/petewarden/dstk) can be useful for local bulk geocoding that would be too much for a hosted service.
 
 ## Lines
+
 - Small amounts of data: use [Leaflet](http://leafletjs.com/)
 - Lots of data, or need line labels (are they streets?)? Use [TileMill](https://www.mapbox.com/tilemill/)
 - Tons of data, and you don't need line labels? Use [datamaps](https://github.com/ericfischer/datamaps).
@@ -74,16 +77,25 @@
 
 ## A format that I can't read
 
-- Install [GDAL](http://www.gdal.org/) and use ogr2ogr to convert the file
+- Install [GDAL](http://www.gdal.org/) and use ogr2ogr to convert the file. If you can't install
+  this, you can use it online with [Ogre](http://ogre.adc4gis.com/)
+- Commercial tools:
+  - [SAFE FME](http://www.safe.com/)
 - Ask your source for a better file format
 
 ## I don't have data yet
 
-- Contact the town or federal GIS dept you need
-- Use [FOIAMachine.org](https://www.foiamachine.org/) to request data via FOIA
-- If you want to create data, use [geojson.io](http://geojson.io/) and draw it.
-- For basic data like countries, cities, use [naturalearthdata.com](http://www.naturalearthdata.com/)
-- Use [OpenStreetMap extracts](https://mapzen.com/metro-extracts/) for higher-detail local data
+- Government Data
+  - Contact the town or federal GIS dept you need
+  - Use [FOIAMachine.org](https://www.foiamachine.org/) to request data via FOIA
+- Personal Data
+  - If you want to create data, use [geojson.io](http://geojson.io/) and draw it.
+- Global Data
+  - For basic data like countries, cities, use [naturalearthdata.com](http://www.naturalearthdata.com/)
+  - Use [OpenStreetMap extracts](https://mapzen.com/metro-extracts/) for higher-detail local data
+- Historical Data
+  - [NYPL MapWarper](http://maps.nypl.org/) for historical, scanned (raster) maps
+  - Greek & Roman: [Pleiades](http://pleiades.stoa.org/home)
 
 ## Visualization defaults
 
