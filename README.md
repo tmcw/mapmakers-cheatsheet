@@ -59,6 +59,12 @@
       - Canada: [Geogratis](http://geogratis.gc.ca/site/eng/geoloc)
       - OpenStreetMap: [Nominatim](http://nominatim.openstreetmap.org/)
       - [Data Science Toolkit](https://github.com/petewarden/dstk) can be useful for local bulk geocoding that would be too much for a hosted service.
+    - geocoding libraries
+      - node - [node geocoder](http://nchaulet.github.io/node-geocoder/)
+      - Perl - [Geo::Coder::Many](https://metacpan.org/pod/Geo::Coder::Many)
+      - PHP - [Geocoder PHP](http://geocoder-php.org)
+      - Python - [geopy](https://github.com/geopy/geopy)
+      - Ruby - [Ruby Geocoder](http://www.rubygeocoder.com)
 
 ## Lines
 
