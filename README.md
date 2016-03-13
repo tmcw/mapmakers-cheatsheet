@@ -13,7 +13,7 @@
   - Too much and the points just represent presence - like tweets
     - Create a heatmap with [Leaflet.heat](https://github.com/Leaflet/Leaflet.heat) or [QGIS heatmap](http://qgis.spatialthoughts.com/2012/07/tutorial-making-heatmaps-using-qgis-and.html) plugin. If you
       use QGIS heatmap, start again at Raster.
-  - Tons of data, and you don't need labels? Use [datamaps](https://github.com/ericfischer/datamaps).
+  - Tons of data, and you don't need labels? Use [tippecanoe](https://github.com/mapbox/tippecanoe).
 
 ## Polygons
 
