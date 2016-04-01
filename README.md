@@ -89,6 +89,20 @@
   - [SAFE FME](http://www.safe.com/)
 - Ask your source for a better file format
 
+## OpenStreetMap
+
+- I want raw data right from the source, up to the minute, in its original form? [planet.osm](http://planet.openstreetmap.org/)
+  - Drawbacks: downloads are very large and require specialized tools to process
+- I want raw data for subsets of the world: [Geofabrik extracts](http://www.geofabrik.de/data/download.html) or [Mapzen metro extracts](https://mapzen.com/data/metro-extracts/)
+  - Drawbacks: only includes predefined areas, not as up-to-date as Planet.osm
+- I want data useful for **fast basemaps**, already processed into vector tiles: [Mapbox](https://mapbox.com/)
+  - Drawbacks: doesn't include all features or all tags on features, only those appropriate for visualization
+- I want raw data as tiles, which include more data and complete tags: [OSM QA Tiles](http://osmlab.github.io/osm-qa-tiles/)
+  - Drawbacks: much larger & slower than tiles designed for visualization
+- I want a specific subset of data by area, filter, and want the newest data possible: [Overpass](http://wiki.openstreetmap.org/wiki/Overpass_API)
+  - Drawbacks: can't return country-sized chunks of data, only smaller subsets
+ 
+
 ## I don't have data yet
 
 - Government Data
