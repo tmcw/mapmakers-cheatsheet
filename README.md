@@ -101,6 +101,8 @@
   - Drawbacks: much larger & slower than tiles designed for visualization
 - I want a specific subset of data by area, filter, and want the newest data possible: [Overpass](http://wiki.openstreetmap.org/wiki/Overpass_API)
   - Drawbacks: can't return country-sized chunks of data, only smaller subsets
+- I want filtered, up-to-date extracts in extra formats like KMZ, Garmin Image, etc: [HOT Export Tool](http://export.hotosm.org/en/)
+  - Drawbacks: can't do arbitrary regions
  
 
 ## I don't have data yet
