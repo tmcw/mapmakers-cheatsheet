@@ -124,7 +124,7 @@
 - Projection:
   - If it's a web map with tiles, use [Spherical Mercator](http://epsg.io/3857)
   - If using [d3](http://d3js.org/) and not using tiles anywhere, use whatever fits best. Bonus projections are in [d3-geo-projection](https://github.com/d3/d3-geo-projection).
-  - Have a project and not sure what it is? Use [epsg.io](http://epsg.io/3857).
+  - Have a projection and not sure what it is? Use [epsg.io](http://epsg.io/3857).
 - Colors:
   - When in doubt, use [ColorBrewer](http://colorbrewer2.org/)
   - Want to know more? Read [Subtleties of Color](http://earthobservatory.nasa.gov/blogs/elegantfigures/2013/08/05/subtleties-of-color-part-1-of-6/)
