@@ -5,7 +5,7 @@
 - How much data?
   - Just enough
     - Convert the data to [GeoJSON](http://geojson.org/) & make a simple [Leaflet](http://leafletjs.com/) map
-  - Too much in a confusing way, but each points data is important?
+  - Lots of points, and each point has data that you want to be able to explore. For instance, apartment listings which might number 10 per city block, but you want to be able to click on them and see photos and links.
     - Cluster your points with [Leaflet.markercluster](https://github.com/Leaflet/Leaflet.markercluster)
   - Too much and the points have some value that can be aggregated
     - Create hexbins of your points with the [QGIS hexbin](https://www.mapbox.com/blog/binning-alternative-point-maps/) plugin, to make
@@ -23,7 +23,7 @@
   - Too much, the polygons have necessary detail
     - Use [TileMill](https://www.mapbox.com/tilemill/) to render an interactive map with [UTFGrid](https://www.mapbox.com/developers/utfgrid/)
     - Use [GeoServer](http://geoserver.org/) with WMS layers and GetFeatureInfo
-  - Too much, the polygons have unnecessary details
+  - Too much, the polygons have unnecessary details or many of the polygons have shared borders, like state or province maps
     - Simplify them with [TopoJSON](https://github.com/mbostock/topojson) or [QGIS](http://www.qgis.org/)
 
 ## Attributes
@@ -69,13 +69,16 @@
 ## Lines
 
 - Small amounts of data: use [Leaflet](http://leafletjs.com/)
-- Lots of data, or need line labels (are they streets?)? Use [TileMill](https://www.mapbox.com/tilemill/)
+- Lots of data, or need line labels (are they streets?)? Use [Mapbox Studio](https://www.mapbox.com/mapbox-studio/)
 - Tons of data, and you don't need line labels? Use [datamaps](https://github.com/ericfischer/datamaps).
 
 # Raster
 
 - Already georectified & cleaned (from satellites or fixed-up sources)
-  - Render a map with [TileMill](https://www.mapbox.com/tilemill/) and use the tiles in Leaflet
+  - If you want to host it yourself
+    - Render tiles with [MapTiler](http://www.maptiler.com/), publish them on S3 or some other service, view them in Leaflet
+  - If you want someone else to host & process
+    - Upload to [Mapbox](https://mapbox.com/) and view in Mapbox GL JS or any client
   - Read [processing satellite imagery](https://www.mapbox.com/foundations/processing-satellite-imagery/) to understand [GDAL](http://www.gdal.org/)/[ImageMagick](http://www.imagemagick.org/) workflow.
 - Raster images from drones
 - Raster images from scanned maps
@@ -122,8 +125,10 @@
 ## Visualization defaults
 
 - Projection:
-  - If it's a web map with tiles, use [Spherical Mercator](http://epsg.io/3857)
+  - If it's a web map with tiles, use [Spherical Mercator](http://epsg.io/3857). This is the default for Leaflet, Mapbox GL JS, and most other clients.
   - If using [d3](http://d3js.org/) and not using tiles anywhere, use whatever fits best. Bonus projections are in [d3-geo-projection](https://github.com/d3/d3-geo-projection).
+    - If it's a map of America, use the [Albers projection](https://en.wikipedia.org/wiki/Albers_projection)
+    - If it's a map of a pole, use an [Azimuthal equidistant projection](https://en.wikipedia.org/wiki/Azimuthal_equidistant_projection)
   - Have a projection and not sure what it is? Use [epsg.io](http://epsg.io/3857).
 - Colors:
   - When in doubt, use [ColorBrewer](http://colorbrewer2.org/)
@@ -139,5 +144,6 @@
   - Scale points by area, not diameter
 - Flair:
   - Only add a north arrow if north isn't up
+    - There are few cases where north shouldn't be up: for instance, [Montreal, Canada is often mapped at an angle](https://www.google.com/search?tbs=imgo%3A1&tbm=isch&sa=1&btnG=Search&q=montreal+map).
   - Always attribute your data, especially [OpenStreetMap](http://www.openstreetmap.org/), to avoid the nerd wrath
   - If it zooms, add visible zoom controls. Pan isn't necessary, but not everyone has a scroll wheel / multitouch
