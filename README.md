@@ -146,3 +146,9 @@
     - There are few cases where north shouldn't be up: for instance, [Montreal, Canada is often mapped at an angle](https://www.google.com/search?tbs=imgo%3A1&tbm=isch&sa=1&btnG=Search&q=montreal+map).
   - Always attribute your data, especially [OpenStreetMap](https://www.openstreetmap.org/), to avoid the nerd wrath
   - If it zooms, add visible zoom controls. Pan isn't necessary, but not everyone has a scroll wheel / multitouch
+
+---
+
+### See also
+
+* [mapmakers-cheatsheet in Japanese](https://github.com/sw897/mapmakers-cheatsheet)
