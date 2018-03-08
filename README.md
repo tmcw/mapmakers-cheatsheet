@@ -21,7 +21,7 @@
   - Just enough
     - Convert the data to [GeoJSON](http://geojson.org/) & make a simple Leaflet map
   - Too much, the polygons have necessary detail
-    - Use [TileMill](https://www.mapbox.com/tilemill/) to render an interactive map with [UTFGrid](https://www.mapbox.com/developers/utfgrid/)
+    - Use [Mapbox Studio](https://www.mapbox.com/mapbox-studio/).
     - Use [GeoServer](http://geoserver.org/) with WMS layers and GetFeatureInfo
   - Too much, the polygons have unnecessary details or many of the polygons have shared borders, like state or province maps
     - Simplify them with [TopoJSON](https://github.com/mbostock/topojson) or [QGIS](http://www.qgis.org/)
@@ -34,7 +34,7 @@
     - Normalize absolutes to rates by dividing over polygon area,
       and start from Rates
   - Rates or Categories
-    - Make a choropleth map with [Leaflet](http://leafletjs.com/) for small data, [TileMill](https://www.mapbox.com/tilemill/)
+    - Make a choropleth map with [Leaflet](http://leafletjs.com/) for small data, [Mapbox Studio](https://mapbox.com/mapbox-studio/)
       for big data
   - Temporal data - values over time
     - If there are fewer than 100 samples - like 50 years of data grouped by year, make [small multiples](http://www.nytimes.com/interactive/2012/07/20/us/drought-footprint.html): a map per sample.
@@ -117,7 +117,6 @@
   - If you want to create data, use [geojson.io](http://geojson.io/) and draw it.
 - Global Data
   - For basic data like countries, cities, use [naturalearthdata.com](http://www.naturalearthdata.com/)
-  - Use [OpenStreetMap extracts](https://mapzen.com/metro-extracts/) for higher-detail local data
 - Historical Data
   - [NYPL MapWarper](http://maps.nypl.org/) for historical, scanned (raster) maps
   - Greek & Roman: [Pleiades](http://pleiades.stoa.org/home)
@@ -145,5 +144,5 @@
 - Flair:
   - Only add a north arrow if north isn't up
     - There are few cases where north shouldn't be up: for instance, [Montreal, Canada is often mapped at an angle](https://www.google.com/search?tbs=imgo%3A1&tbm=isch&sa=1&btnG=Search&q=montreal+map).
-  - Always attribute your data, especially [OpenStreetMap](http://www.openstreetmap.org/), to avoid the nerd wrath
+  - Always attribute your data, especially [OpenStreetMap](https://www.openstreetmap.org/), to avoid the nerd wrath
   - If it zooms, add visible zoom controls. Pan isn't necessary, but not everyone has a scroll wheel / multitouch
