@@ -151,4 +151,4 @@
 
 ### See also
 
-* [mapmakers-cheatsheet in Japanese](https://github.com/sw897/mapmakers-cheatsheet)
+* [mapmakers-cheatsheet in Chinese](https://github.com/sw897/mapmakers-cheatsheet)
